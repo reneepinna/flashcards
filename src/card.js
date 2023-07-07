@@ -9,7 +9,6 @@ function createCard(id, question, answers, correctAnswer) {
 
 function createDeck(cards) {
   const deck  = [];
-  // const args = Array.from(arguments);
 
   cards.forEach(card => {
     deck.push(card);  
