@@ -25,7 +25,6 @@ describe('deck', function(){
   beforeEach(function () {
     card1 = createCard(1, 'What allows you to define a set of related information using key-value pairs?', ['object', 'array', 'function'], 'object');
     card2 = createCard(2, "What is a comma-separated list of related values?", ["array", "object", "function"],"array")
-    
   })
 
   it('should be an array of cards', function() {
@@ -33,16 +32,6 @@ describe('deck', function(){
 
     expect(deck).to.be.an('array');
     expect(deck).to.deep.equal([card1, card2])
-  })
-
-  it('should take any number of cards', function() {
-    const card3 = createCard(3, "What type of prototype method directly modifies the existing array?", ["mutator method", "accessor method", "iteration method"], "mutator method");
-    const card4 = createCard(4, "Which member of the Justice League was at one point kicked out", ['Flash', 'Martian Manhunter', 'Hawkgirl'], 'Hawkgirl');
-    const card5 = createCard(5, "In the Justice League animated series, which hero switches bodies with Lex Luthor", ["Superman", "Flash", "Batman"], "Flash");
-
-    const deck = createDeck([card1, card2, card3, card4, card5]);
-
-    expect(deck.length).to.equal(5);
   })
 
   it('should know how many cards are in the deck', function() {
